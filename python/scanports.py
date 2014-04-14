@@ -32,16 +32,13 @@ try:
         sock.close()
 
 except KeyboardInterrupt:
-    print "You pressed Ctrl+C"
-    sys.exit()
+    sys.exit("You pressed Ctrl+C")
 
 except socket.gaierror:
-    print 'Hostname could not be resolved. Exiting'
-    sys.exit()
+    sys.exit("Hostname could not be resolved. Exiting")
 
 except socket.error:
-    print "Couldn't connect to server"
-    sys.exit()
+    sys.exit("Couldn't connect to server")
 
 # Checking the time again
 t2 = datetime.now()
