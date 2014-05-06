@@ -4,7 +4,6 @@
 # Usage: webtail.py PORT FILENAME
 # Tested with tornado 2.1
 
-
 import tornado.httpserver
 import tornado.websocket
 import tornado.ioloop
