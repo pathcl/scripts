@@ -4,8 +4,6 @@
 # Usage: webtail.py PORT FILENAME
 # Tested with tornado 2.1
 
-# Thanks to Thomas Pelletier for it's great introduction to tornado+websocket
-# http://thomas.pelletier.im/2010/08/websocket-tornado-redis/
 
 import tornado.httpserver
 import tornado.websocket
