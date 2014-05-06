@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 # Equivalent of "tail -f" as a webpage using websocket
 # Usage: webtail.py PORT FILENAME
 # Tested with tornado 2.1
