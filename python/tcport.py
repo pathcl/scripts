@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Measures response time on a given TCP PORT
 # example: ./tcport.py google.cl 80
+#
 
 import sys, socket, time
 
