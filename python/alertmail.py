@@ -1,6 +1,5 @@
 #!/usr/bin/python
-import time
-import smtplib
+import time, smtplib
 
 sender = 'user@domain.tld'
 receivers = ['someMail@domain.tld']
