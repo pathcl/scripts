@@ -9,7 +9,7 @@ except ImportError:
 
 
 def main():
-    data = numpy.loadtxt('ultimo.txt')
+    data = numpy.loadtxt('file.txt')
     if Decimal(data.sum()) > 1:
         return "Jitter Lag!"
     else:
