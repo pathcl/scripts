@@ -3,10 +3,10 @@ import time
 import smtplib
 
 sender = 'user@domain.tld'
-receivers = ['luis.sanmartin@unix.cl']
+receivers = ['someMail@domain.tld']
 now = time.strftime("%c")
-message = """From: OTRS <user@domain.tld>
-To: Luis San Martin <luis.sanmartin@unix.cl>
+message = """From: SomeSender <user@domain.tld>
+To: Luis San Martin <luis.sanmartin@domain.tld>
 Subject: ALRT ALRT
 
 ALRT ALRT ALRT ALRT.
