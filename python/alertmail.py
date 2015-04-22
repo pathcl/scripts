@@ -8,7 +8,6 @@ now = time.strftime("%c")
 message = """From: SomeSender <user@domain.tld>
 To: Luis San Martin <luis.sanmartin@domain.tld>
 Subject: ALRT ALRT
-
 ALRT ALRT ALRT ALRT.
 """
 
