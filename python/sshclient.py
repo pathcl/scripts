@@ -21,9 +21,8 @@ def workon(host):
             print "FAIL " + host
 
 def main():
-    hosts = open('hosts.txt')
     threads = []
-    for h in hosts:
+    for h in open('hosts.txt'):
         h = h.rstrip()
         t = threading.Thread(target=workon, args=(h,))
         t.start()
