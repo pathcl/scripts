@@ -14,7 +14,7 @@ def workon(host):
         stdin.write('xy\n')
         stdin.flush()
         with outlock:
-            print host
+            print "Connecting to %s " % host
             print stdout.readlines()
 
     except paramiko.AuthenticationException:
