@@ -29,4 +29,6 @@ def main():
         threads.append(t)
     for t in threads:
         t.join()
-main()
+
+if __name__ == "__main__":
+    main()
