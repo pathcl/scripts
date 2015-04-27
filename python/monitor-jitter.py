@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 try:
    import numpy
@@ -7,12 +7,13 @@ try:
 except ImportError:
    raise ImportError('Please check numpy and Decimal modules')
 
-def main():
-    data = numpy.loadtxt('file.txt')
-    if Decimal(data.sum()) > 1:
-        return "Jitter Lag!"
-    else:
-        return "Ok"
 
-if __name__ == '__main__':
-   print main()
+def main():
+    data = numpy.loadtxt('/path/to/somefile')
+    if Decimal(data.sum()) > 1:
+        print str(data.sum()) + " NOK" 
+    else:
+        print str(data.sum()) + " OK" 
+
+if __name__ == "__main__":
+    main()
