@@ -28,7 +28,7 @@ def main():
 	    print Output_key[2]
     elif ( Dict['-a'] == "requests"):
 	    requests = float(Output_key[3]) / float(Output_key[2])
-            print requests
+            print round(requests)
     else:
 	    print "unknown!!"
 	    sys.exit(1)
