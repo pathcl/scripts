@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-Usage: check_ssl_certificate -H <host> -p <port> [-m <method>] 
+Usage: ./sslwarn.py -H <host> -p <port> [-m <method>] 
                       [-c <days>] [-w <days>]
   -h show the help
   -H <HOST>    host/ip to check
