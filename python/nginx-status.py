@@ -6,7 +6,7 @@ import re
 
 
 def Usage():
-    print "Usage: nginx-status.py -h 127.0.0.1 -p 80 -a [active|accepted|requests]"
+    print "Usage: nginx-status.py -h 127.0.0.1 -p 80 -a [active|accepted|waiting]"
     sys.exit(2)
 
 
@@ -18,19 +18,21 @@ def main():
         Dict = dict(opts)
     except getopt.GetoptError:
         Usage()
+    # Base url for nginx status module
     Nginx_url = "http://" + Dict['-h'] + ":" + Dict['-p'] + "/status"
+    # Create an object using urllib2 to ask for our url
     Nginx_req = urllib2.Request(Nginx_url)
+    # Then we read what's inside
     Nginx_res = urllib2.urlopen(Nginx_req)
-    Output_key = re.findall(r'\d{1,8}', Nginx_res.read())
+    # This is a regular expression which enables parses our nginx status
+    status = re.findall(r'\d{1,8}', Nginx_res.read())
+    # Given Dict we handle parameters 'active', 'accepted', 'handled'
     if (Dict['-a'] == "active"):
-        print Output_key[0]
+        print status[0]
     elif (Dict['-a'] == "accepted"):
-        print Output_key[1]
-    elif (Dict['-a'] == "handled"):
-        print Output_key[2]
-    elif (Dict['-a'] == "requests"):
-        requests = float(Output_key[3]) / float(Output_key[2])
-        print round(requests)
+        print status[1]
+    elif (Dict['-a'] == "waiting"):
+        print status[6]
     else:
         print "unknown!!"
         sys.exit(1)
