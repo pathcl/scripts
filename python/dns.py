@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Ideally looks up for a given str on a file (bind for example)
+# You have to define on which servers on 'dns.txt'
 try:
 
     import threading
@@ -33,7 +34,7 @@ def workon(host):
 
 
 def main():
-    hosts = open('/home/pathcl/python/otros/dns.txt')
+    hosts = open('dns.txt')
     threads = []
     for h in hosts:
         h = h.rstrip()
