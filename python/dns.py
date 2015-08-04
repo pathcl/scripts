@@ -25,12 +25,12 @@ def workon(host):
         stdin.write('xy\n')
         stdin.flush()
         with outlock:
-            print('Buscando en {0}'.format(host))
+            print('Searching on {0}'.format(host))
             for line in stdout.readlines():
                 print(line.rstrip())
 
     except paramiko.AuthenticationException:
-            print('FAIL en {0}'.format(host))
+            print('FAIL on {0}'.format(host))
 
 
 def main():
