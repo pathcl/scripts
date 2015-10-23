@@ -3,12 +3,13 @@
 try:
 
     from bs4 import BeautifulSoup
+    from pprint import pprint 
     import requests
     import re
     import sys
 
 except ImportError:
-    print("please check your modules")
+    pprint("please check your modules")
 
 
 def main(url):
@@ -19,12 +20,12 @@ def main(url):
     soup = BeautifulSoup(post.text, 'html.parser')
     text = (soup.get_text(separator=' ', strip=True))
     result = re.findall(r'\w+.\w+.\d+.\d+', text)
-    print(result)
+    pprint(result)
 
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
-        print("Usage: ./measure-latency.py www.trololo.com")
+        pprint("Usage: ./measure-latency.py www.trololo.com")
     else:
         url = sys.argv[1]
         main(url)
